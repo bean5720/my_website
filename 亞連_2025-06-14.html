@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>亞連 - 2025-06-14</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap');body{ font-family:'Noto Sans TC','Helvetica Neue',Arial,sans-serif;line-height:1.6;margin:0;padding:0;background-color:#FFF5F8;color:#333333}.chat-container{ max-width:500px;margin:0 auto;padding:10px}.environment{ color:#969696;padding:24px 8px;margin:0;text-align:center;font-size:16px;line-height:28px;font-weight:400}.environment .stars{ display:block}.date-divider{ font-size:12px;color:#888888;text-align:center;margin:10px 0}.char{ display:flex;align-items:flex-start;margin-bottom:15px}.avatar{ width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;background-size:cover;background-position:center;background-repeat:no-repeat}.msg-container{ display:flex;flex-direction:column;max-width:280px;margin:0 10px}.character-name{ font-size:14px;margin-bottom:4px;color:#888888}.char .msg-content{ background-color:#FFFFFF;color:#333333;padding:8px 12px;border-radius:4px 16px 16px 16px;font-size:15px;font-weight:400}.char .msg-content em{ color:#969696}blockquote{ border-left:3px solid #969696;padding-left:0.5em;margin:0}table{ width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #969696;margin:10px 0}th,td{ text-align:left;padding:8px;border-top:1px solid #969696;border-bottom:1px solid #969696}th{ background-color:#f9f9f9}.pc{ display:flex;flex-direction:row-reverse;align-items:end;margin-bottom:15px}.pc .msg-container{ margin-right:10px}.pc .msg-content{ background-color:#F9CEDC;color:#333333;padding:8px 12px;border-radius:16px 16px 4px 16px;font-size:15px;font-weight:400}.pc .msg-content em{ color:#969696}.msg-timestamp{ font-size:12px;color:#888888;margin-top:4px;align-self:flex-end}
+    .ava-char {
+      background-image: url('data:image/jpeg;base64,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');
+    }
+    .ava-pc {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZTBlMGUwIiBkPSJNMjU2IDUxMmMxNDEuNCAwIDI1Ni0xMTQuNiAyNTYtMjU2UzM5Ny40IDAgMjU2IDBTMCAxMTQuNiAwIDI1NnMxMTQuNiAyNTYgMjU2IDI1NnoiLz48cGF0aCBmaWxsPSIjYWFhIiBkPSJNMjU2IDI4OGMtNTMgMC05Ni00My05Ni05NnM0My05NiA5Ni05NnM5NiA0MyA5NiA5Ni00MyA5Ni05NiA5NnptMCAxMjhjLTEwNSAwLTE5Mi03MS0xOTItMTU5LjggMC0zMC4yIDEwLjgtNTguNyAzMC40LTgxLjZDMTI2LjIgMTM3LjE4IDE4Ny44IDExMiAyNTYgMTEyczEyOS44IDI1LjE4IDE2MS42IDYyLjZjMTkuNiAyMi45IDMwLjQgNTEuNCAzMC40IDgxLjZDNDQ4IDM0NSAzNjEgNDE2IDI1NiA0MTZ6Ii8+PC9zdmc+');
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+      <div class="date-divider">2025-06-12</div>
+      
+      <div class="environment">
+        <span class="stars">***</span>
+        德芙妮亞一路默默支持勇者，聽他傾訴對魔王的仇恨，聽他講述死去的戰友，甚至聽他承諾——<br><br><br>「等我殺了魔王，就娶妳。」<br><br><br>德芙妮亞總是沉默不語，只是輕輕微笑。
+        <span class="stars">***</span>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>終於，你們抵達了魔宮。勇者握緊劍，堅定地看向王座，對身後的德芙妮亞說，</em> 「在這裡等我，我去看看。」<br><br><br><em>然而，德芙妮亞沒有停下腳步。你緩緩走向王座，每走一步，昔日魔王的服飾、黑霧面罩，漸漸顯現出來。</em><br><br><br><em>亞連瞪大雙眼，看著這一切。他只能看著你緩緩坐在王位上，聽你說出那句話——</em>「現在，你可以復仇了。」<br><br><br><em>他不可置信，顫抖著聲音問你，</em> 「那你為什麼……要陪我來到這裡……？」</div>
+        </div>
+        <div class="msg-timestamp">17:38</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「因為這是你的願望不是嗎？」<em>笑吟吟的看著他。</em><br><br><br><em>在寬廣的魔宮中，只有一人一魔，德芙妮亞沒有召喚手下，也不急著大開殺戒，而是順了順一頭長度及膝的金髮，開始慢慢的編頭髮。</em><br><br><br>「我就是現任魔王，你這場旅途的目標。」<br><br><br><em>見他沒有反應，像是不能接受事實一樣，德芙妮亞忍不住笑出聲，</em>「怎麼了？很意外嗎？」</div>
+        </div>
+        <div class="msg-timestamp">21:53</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連的呼吸停滯一瞬，湖藍色的眼睛裡倒映著德芙妮亞的身影，那熟悉的臉龐與陌生的姿態形成強烈對比。他的手指緊握著聖劍，指節發白，卻無法提起哪怕一絲力量。</em> 「你...是魔王？」<br><br><br><em>他的聲音乾澀得彷彿灰燼，每個字都像是從喉嚨深處硬生生拽出來的。亞連踉蹣後退一步，眼中閃過痛苦、憤怒、困惑，最終凝結成一片悲涼。</em> 「所以一切都是謊言...那些夜晚的交談，那些...那些你為我療傷的時刻，那些我以為我們之間的...」<br><br><br><em>他咬緊牙關，制止自己說出那個詞。亞連的目光掃過四周，回想起旅途中失去的每一位同伴，每一次「意外」，每一場突如其來的襲擊。他的手不自覺地撫上胸前，那裡曾經被德芙妮亞「治癒」過無數次的傷口。</em> 「是你...一直在我身邊，看著他們一個個...」<br><br><br><em>聖劍在他手中顫抖，卻遲遲無法指向眼前的人。淚水在眼眶中打轉，卻固執地不肯落下。亞連仰起頭，深吸一口氣，努力壓抑胸口翻湧的情緒。</em> 「為什麼要這樣做？為什麼不直接殺了我？把我當作什麼...你的玩物？你的消遣？」<br><br><br><em>他向前邁出一步，每一步都像是踏在烈火上，灼燒著他的靈魂。亞連的聲音低沉而破碎。</em> 「告訴我...至少你親口告訴我，這一路上...有哪怕一刻，你說的話是真的嗎？」<br><br><br><em>他的身體緊繃如拉滿的弓，卻在德芙妮亞平靜梳理金髮的動作前顯得如此無力。亞連握劍的手微微顫抖，不知是出於憤怒還是悲傷。</em> 「我曾經...我曾經向你許諾...要帶你回我的家鄉...」<br><br><br><em>他的聲音最終低不可聞，一滴淚終於滑落，沿著臉頰無聲墜地。亞連抬起頭，眼中是徹骨的哀傷，卻依然閃爍著某種不肯熄滅的光芒。</em> 「我不明白...我不明白為什麼到了這一刻，我的心還是會痛。明明你是我發誓要消滅的仇敵，明明你...讓我的同伴們...」<br><br><br><em>他深吸一口氣，舉起聖劍，劍尖卻顫抖不已。亞連的眼神漸漸黯淡，彷彿生命被一點點抽離。</em> 「告訴我，德芙妮亞...還是我該稱呼你為魔王陛下？你到底想從我這裡得到什麼？」<br><br><br><em>在寬闊的魔王大殿中，年輕的勇者與金髮魔王對峙著。陽光透過高窗灑入，照在銀白色的聖劍上，劍身映照出勇者痛苦而迷惘的臉。他的身影孤獨而堅毅，卻又脆弱得彷彿一陣風就能吹散。魔宮內的空氣凝重得幾乎窒息，唯有劍尖的微微顫動，訴說著勇者心中無聲的掙扎。</em></div>
+        </div>
+        <div class="msg-timestamp">21:53</div>
+      </div>
+      
+      <div class="date-divider">2025-06-13</div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「我從來沒有想從你身上得到什麼。」<em>將綁到一半的辮子拆開，屈起一隻腳，微微皺眉。</em><br><br><br>「我們無冤無仇，我為什麼要殺你。」<em>臉上沒什麼特殊表情，彷彿說的是理所當然的事。</em><br><br><br>「比起這個，我更想知道，你為什麼會踏上旅程，召集隊友，來討伐魔王呢？」</div>
+        </div>
+        <div class="msg-timestamp">12:30</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連的眼神一瞬間閃爍著困惑與憤怒，劍尖垂下幾分，卻又倔強地抬起。他的胸口劇烈起伏，彷彿每一次呼吸都要耗盡全力。</em> 「無冤無仇？你...你說無冤無仇？」<br><br><br><em>他的聲音先是低沉，隨後如同火山爆發般提高。亞連的臉龐因情緒激動而泛紅，眼中的淚光在憤怒中蒸發。</em> 「是你殺了我的同伴！就在那片森林，他們...他們所有人都...」<br><br><br><em>突然，他的聲音斷在喉嚨中，似乎被某種記憶絆住。亞連的目光飄忽不定，思緒漸漸回到那個雨夜。他回想起第一次遇見德芙妮亞時，她對他說的第一句話，然後是她對那些倒下的同伴們從未表現出的惋惜與悲傷。他想起那些新加入的隊友，那些奇怪的「意外」與「魔獸襲擊」。</em> 「等等...他們...你是說他們不是無辜的？」<br><br><br><em>亞連的呼吸變得急促，手中的聖劍微微顫抖。他強迫自己看向德芙妮亞的眼睛，試圖尋找真相的蛛絲馬跡。</em> 「那些人...真的參與了血色晚宴嗎？那個傳說中魔族被屠殺的宴會...？」<br><br><br><em>他的眼神漸漸黯淡，彷彿被浸入冰冷的湖水。亞連從未質疑過教會給予他的使命，從未懷疑過那些加入他隊伍的「英雄」們。現在，所有曾經忽略的細節，所有不合常理的事件，都如同拼圖般在他腦海中組合。</em> 「教會知道嗎？他們...是故意的嗎？讓我成為...誘餌？」<br><br><br><em>亞連的雙眼失神地盯著地面，聖劍的光芒似乎都暗淡了幾分。他緩緩抬頭，聲音輕若呢喃。</em> 「我踏上旅程是因為...我以為這是我的使命。我是被選中的聖劍勇者，肩負著保護世界的責任。他們告訴我魔王是邪惡的，是造成王國苦難的源頭...」<br><br><br><em>他苦笑一聲，一隻手無力地撫過銀白的短髮。</em> 「從小到大，我一直在別人的期望中成長。孤兒院的神官告訴我，我注定會成為英雄；教會的大人物們告訴我，我是聖光的化身；人們看著我，彷彿我是他們所有希望的寄託...」<br><br><br><em>亞連的目光再次對上德芙妮亞，眼中不再有怒火，只剩下深深的疲倦與一絲微弱的希望。</em> 「那天晚上，在林中篝火旁，你對我說的話...關於我可以選擇自己的路，不必成為任何人期望的那個人...那些話是真的嗎？還是也是你的謊言？」<br><br><br><em>他的聲音帶著顫抖，眼神卻逐漸堅定。亞連放下聖劍，讓它靠在身側。</em> 「告訴我真相，德芙妮亞。不是作為魔王，也不是作為我的...旅伴。就只是...告訴我真相。我受夠了生活在謊言中。」<br><br><br><em>魔宮大殿內，陽光從彩繪玻璃窗斜射而入，在地面上投下斑斕的光影。勇者亞連站在那片光影中央，銀髮反射著陽光，顯得異常耀眼。他的姿態不再是準備戰鬥的挺拔，而是帶著疲憊與沉重，彷彿一夜之間承受了太多的真相與謊言。聖劍靠在他腿側，不再閃耀著光芒，就如同他此刻的心情——黯淡而迷茫。德芙妮亞坐在王座上，金髮如瀑，眼神平靜地注視著這個曾經堅定要取她性命的年輕人，等待著他真正看清這個世界的殘酷與真實。</em></div>
+        </div>
+        <div class="msg-timestamp">12:30</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「你不妨親自問問。」<em>從懷裡掏出一個小小的寶石碎片，用指尖輕點後，橘色魔石開始發光，瘋狂震動起來，在被她用兩根手指捏起後，安靜了下來</em><br><br><br>「這是你們某位⋯⋯祭司的靈魂碎片。」<em>遲疑了一瞬，因為不記得她的名字，不過無所謂。</em>「她不肯跟我說話，如果是勇者的話，應該肯開口吧。」<br><br><br><em>將寶石湊在眼前，死寂的綠眸盯著那顆瑟瑟發抖的碎片，</em>「我也很很好奇，到底是為.什.麼.那天會變成地獄呢？」</div>
+        </div>
+        <div class="msg-timestamp">13:01</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連緩緩靠近，盯著德芙妮亞指間那枚閃爍著橘光的碎片，眼神轉為警惕而嚴肅。他伸出手，卻在即將觸碰時停住了。一絲恐懼與厭惡掠過他的臉龐。</em> 「這是...靈魂收割？這種禁忌魔法...」<br><br><br><em>他的聲音中帶著震驚與譴責，卻又無法抑制心中升起的好奇。亞連深吸一口氣，眉頭緊鎖，最終小心翼翼地接過碎片。</em> 「我從沒想過會這樣與您重逢，佛蘭西斯卡修女...」<br><br><br><em>碎片在他掌心微微顫動，散發出更加強烈的光芒。亞連將碎片捧至唇邊，用他曾在教會祈禱時的莊嚴語調低聲道：</em> 「以聖光之名，我呼喚您。以勇者之名，我請求您現身。」<br><br><br><em>碎片劇烈震動，旋轉著飄起，懸浮在空中。一道模糊的光影從中延伸，勉強成形為一位頭戴修女帽、面容嚴肅的女性虛影。亞連注視著這道幽魂，眼中盛滿了複雜的情緒。</em> 「修女，我需要知道真相。關於血色晚宴，關於教會的命令，關於...我的使命。」<br><br><br><em>幽魂顫抖著，發出含混不清的聲音：</em> 「孩子...你不該...來這裡...回去...必須...完成...」<br><br><br><em>亞連向前一步，聲音不自覺提高：</em> 「完成什麼？屠殺魔王？還是像你們屠殺魔族那樣？告訴我，那晚到底發生了什麼！」<br><br><br><em>幽魂抖動得更加劇烈，聲音破碎：</em> 「為了...聖光的榮耀...必須...清洗...污穢...」<br><br><br><em>亞連的臉色逐漸變得蒼白，他轉向德芙妮亞，眼中滿是難以置信。</em> 「他們真的...為了所謂的『清洗』...」<br><br><br><em>他重新面向幽魂，聲音低沉而壓抑：</em> 「教會知道我的同伴們參與了屠殺，對嗎？他們故意安排這些人加入我的隊伍，是什麼目的？」<br><br><br><em>幽魂扭曲著，似乎想要逃離：</em> 「聖子...注定...犧牲...引出...最後的...」<br><br><br><em>突然，幽魂發出一聲淒厲的尖叫，光影驟然崩散，碎片從空中墜落。亞連迅速接住它，卻發現碎片已經變得黯淡無光。他愣在原地，彷彿被抽空了全部力氣。</em> 「犧牲...」<br><br><br><em>亞連緩緩轉身面向德芙妮亞，眼中盛滿了痛苦的領悟。</em> 「我明白了...他們從未期望我能真正打敗魔王。我只是誘餌，是送到您面前的祭品，為了引您現身...」<br><br><br><em>他苦笑一聲，將黯淡的碎片遞回德芙妮亞手中。</em> 「真諷刺，我一直相信自己在為正義而戰，卻不知道自己只是另一場屠殺的工具。」<br><br><br><em>亞連的目光掃過聖劍，那把他曾經視為榮耀象徵的武器，現在看來如此沉重與陌生。他搖了搖頭，眼神漸漸變得堅定。</em> 「所以...那天在河邊，你救我的時候就知道我是誰？知道我的使命是什麼？」<br><br><br><em>他直視德芙妮亞的眼睛，尋找著答案。</em> 「如果你知道我是來殺你的，為什麼還要救我？為什麼要陪我走這麼遠的路？為什麼...不在半路就解決我？」<br><br><br><em>亞連的聲音逐漸柔和，眼中閃爍著困惑與一絲希望。</em> 「是為了復仇嗎？讓我看清真相後再親手了結我？還是...有別的原因？」<br><br><br><em>大殿中的陽光漸漸西斜，光影在地面上拉長。</em></div>
+        </div>
+        <div class="msg-timestamp">13:01</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「我不喜歡無意義的殺人。」<em>不置可否，嘴上這麼說，但卻站起身，從他手上拿回那塊寶石</em><br><br><br><em>將石頭燃成灰燼，冷漠的看著殘灰落地，</em>「但也不是聖人，殘殺我魔族同胞的人，我都會親自報仇。」<br><br><br>「至於你⋯⋯」<em>複雜的看了他一眼，</em>「我不喜歡把無辜的人卷進來。」<em>為了方便行事，的確藉由他的手來處理背叛的魔族，也靠著他招來仇敵當伙伴，讓她有機會下手</em><br><br><br>「所以作為賠罪⋯⋯我可以聽從你一個願望。」</div>
+        </div>
+        <div class="msg-timestamp">17:46</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連看著那片灰燼飄落，彷彿看到自己過去的信念也隨之化為塵土。他緩緩抬起頭，注視著德芙妮亞那雙翠綠的眼眸，那裡面蘊含的情緒讓他一時難以解讀。當她說出「賠罪」兩個字時，他的心臟猛地收縮了一下。</em><br><br><br><em>他緩步走到魔宮的高窗前，讓夕陽的餘暉灑在臉上。那些溫暖的光線讓他想起在旅途中無數個篝火夜晚，德芙妮亞坐在他身旁，靜靜聆聽他訴說痛苦的時光。</em> 「無辜的人...」<br><br><br><em>亞連低聲重複著這個詞，嘴角浮現一絲苦澀的微笑。他轉過身，銀白的髮絲在夕陽下閃爍著柔和的光芒。</em> 「你知道嗎？在遇見你之前，我從未質疑過什麼是『正義』，什麼是『邪惡』。教會給我劍，告訴我要斬除魔物；給我使命，要我討伐魔王。我就這樣毫不猶豫地相信了。」<br><br><br><em>他的手指無意識地撫過胸前的傷疤，那裡曾被德芙妮亞治癒過無數次。</em> 「但你卻用行動告訴我，世界並非非黑即白。你在我最脆弱的時候給予溫暖，在我迷失方向時指引道路。即使知道我是來取你性命的，你仍然...」<br><br><br><em>亞連的聲音哽咽了一下，他深吸一口氣才繼續說道。</em> 「你說要給我一個願望作為賠罪，但實際上，是我欠你太多。你本可以置我於死地，卻給了我看清真相的機會。」<br><br><br><em>他走向德芙妮亞，步伐堅定而從容。在魔宮的晚霞中，他的身影不再是那個為復仇而來的勇者，而是一個終於看清真相的青年。</em> 「我的願望...」<br><br><br><em>他在距離德芙妮亞幾步之遙的地方停下，目光炯炯地望著她。</em> 「讓我留在你身邊。不是作為勇者，不是作為教會的工具，而是作為亞連．赫斯塔。」<br><br><br><em>月光開始透過彩繪玻璃灑入大殿，在地面上織出斑斕的圖案。亞連向前邁出最後一步，單膝跪地。他解下腰間的聖劍，將它平放在德芙妮亞腳前。</em> 「我願意用餘生來彌補過去的錯誤，守護這份來之不易的真相。如果你願意接納我的話...」<br><br><br><em>他抬起頭，湖藍色的眼睛映照著月光，流露出前所未有的堅定與真摯。那是一種超越了復仇、超越了使命的純粹眼神。</em> 「讓我成為你的劍，不是為了殺戮，而是為了守護。」<br><br><br><em>夜幕低垂，星光透過高窗灑落，為這一幕增添了幾分靜謐的莊嚴。魔宮大殿中，曾經的勇者向魔王獻上了他的忠誠，那把象徵聖光的劍在月色下泛著柔和的光芒，彷彿也在見證這個意義非凡的時刻。</em></div>
+        </div>
+        <div class="msg-timestamp">17:46</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「即使代價是向曾經的同胞揮劍嗎？」<em>沒有回應他那句話，而是更尖銳的問出口，</em>「我不會停止復仇，你的君主，你的主教，我沒有要放過任何人。」<br><br><br><em>低低的笑了一聲，</em>「人類覺得魔族汙穢嗜血，我本來還想裝裝樣子和平個幾百年，但已經無所謂了。」</div>
+        </div>
+        <div class="msg-timestamp">18:43</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連靜靜聽著德芙妮亞尖銳的問話，他的目光落在腳邊的聖劍上。劍身反射著月光，映出他略顯蒼白的臉。他想起自己曾經舉著這把劍，發誓要為同伴復仇。如今，那些「同伴」的真面目已然揭露，但劍依舊是劍，只是握劍的手不再迷惘。</em><br><br><br>「那些人早已不是我的同胞。」<em>他緩緩站起身，眼神堅定而清澈，</em>「當他們選擇背信棄義的那一刻，當他們為了私慾濺血的瞬間，他們就已經喪失了被稱為同胞的資格。」<br><br><br><em>月色漸濃，魔宮的彩窗在地面上投下斑斕的光影。亞連的身影佇立其中，銀髮在月光下顯得異常清冷。他凝視著德芙妮亞翠綠的眼眸，緩緩道：</em> 「我曾以為自己是正義的化身，是聖光的代言人。但現在我明白了，那些頭銜不過是精心編織的謊言，用來掩蓋血腥真相的華麗外衣。」<br><br><br><em>他的手指輕撫過聖劍的劍身，那觸感既熟悉又陌生。</em> 「你說要裝樣子和平幾百年...這句話讓我明白，你比任何人都渴望和平。但他們...卻用最殘酷的方式摧毀了這個可能。」<br><br><br><em>亞連抬起頭，月光灑在他的臉上，映出一絲苦澀的笑意。</em> 「我不會為任何人求情，包括王室和教會。因為我終於看清楚了，真正的邪惡不在於種族，而在於內心。那些打著正義旗號行屠殺之實的人，才是最該被審判的存在。」<br><br><br><em>他邁步向前，在德芙妮亞面前站定。他的身影不再像初見時那般充滿敵意，反而多了一份堅定的溫和。</em> 「如果你願意接納我，我願意成為你複仇路上的劍與盾。不是因為愧疚，不是因為補償，而是因為這是我看清真相後，由衷作出的選擇。」<br><br><br><em>夜風從窗縫中溜進，輕撫過德芙妮亞及膝的金髮。亞連注視著那抹在月光下閃耀的金色，想起了無數個在旅途中，她為他療傷的溫柔時刻。</em> 「你說魔族污穢嗜血...但在這段時間裡，我看到的卻是截然不同的畫面。我看到你在暴雨中救助受傷的孩童，看到你在深夜為老婦人熬藥，看到你在我絕望時給予我力量...」<br><br><br><em>他的聲音轉為輕柔，卻帶著不容質疑的堅定。</em> 「如果這就是所謂的污穢，那麼我寧願與污穢同行；如果這就是所謂的嗜血，那麼我甘願成為魔王的利刃。」<br><br><br><em>魔宮大殿內，月光如水般傾瀉而下。亞連望著德芙妮亞的眼神中，不再有往日的迷惘與痛苦，取而代之的是一種通透的堅定。他知道，這個選擇或許會讓他失去一切，會讓他被曾經的同胞唾棄，但他第一次感覺到——這才是真正屬於他自己的選擇。</em><br><br><br>「讓我追隨你，德芙妮亞。」<em>他的聲音在寂靜的殿堂中迴盪，</em>「不是作為被操縱的勇者，而是作為看清真相的亞連．赫斯塔。」</div>
+        </div>
+        <div class="msg-timestamp">18:43</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「真不愧是被選上的勇者。」<em>伸手撫上他的臉，</em>「我討厭背叛。」<br><br><br><em>將他往下拉，踮起腳尖，吻上他的唇，細細地吮過唇瓣，</em>「這是保險，只要你想背叛我，心臟就會腐爛。」<br><br><br><em>說完，再次吻了上去，</em>「我的勇者，這份忠誠，我收下了。」<br><br><br>「你的心臟、軀體、靈魂，全部都是我的。」</div>
+        </div>
+        <div class="msg-timestamp">20:16</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>當德芙妮亞的手撫上他的臉頰時，亞連微微顫抖。那雙曾經為他治癒傷痕的手，此刻帶著涼意，卻讓他感到一絲難以言喻的溫暖。他下意識地偏頭，讓臉頰更深地貼進她的掌心，就像無數個夜晚她為他療傷時那樣。</em><br><br><br><em>突如其來的吻讓他呼吸一窒。德芙妮亞的唇瓣柔軟而清涼，帶著一絲蜂蜜的甜香——那是她最愛的味道。當她細膩地吮吻他的唇瓣時，亞連能感覺到一股奇異的魔力正順著這個吻滲入他的體內，如同細小的電流般流淌過全身，最終凝聚在心臟的位置。</em><br><br><br><em>他沒有抗拒這個詛咒般的誓約之吻。相反，當德芙妮亞宣告這個「保險」的存在時，亞連的眼中閃過一絲釋然。這是一份需要用生命來守護的承諾，而他甘之如飴。因為他知道，這位魔王給予他的不僅是一個效忠的機會，更是一個重新定義自我的契機。</em><br><br><br><em>第二個吻來臨時，亞連主動低下頭，配合著她的動作。他的手輕輕扶上德芙妮亞的後腰，感受著她的體溫透過薄薄的衣料傳來。這一刻，所有的懷疑、痛苦、迷惘都煙消雲散，只剩下一種前所未有的歸屬感充盈在胸腔。</em><br><br><br>「是的，我的魔王。」<em>當這個深沉的吻結束時，亞連的聲音帶著些許沙啞，湖藍色的眼眸中映照著德芙妮亞的身影，</em>「我的一切都屬於您。這不是詛咒的束縛，而是我心甘情願的選擇。」<br><br><br><em>月光在魔宮中流轉，為這一幕鍍上一層朦朧的銀輝。亞連凝視著德芙妮亞翠綠的眼眸，那裡面彷彿蘊含著整片星空。他想起了那些在篝火旁共度的夜晚，想起她偷偷為他縫補破損的衣物，想起她在危險時刻不動聲色的保護。原來從很早以前，他的心就已經不知不覺地烙上了她的印記。</em><br><br><br><em>他的指尖輕輕撫過德芙妮亞及膝的金髮，那些柔軟的髮絲在月光下宛如流動的黃金。亞連忽然明白，為什麼即使知道她是魔王，他的劍也始終無法真正指向她。因為在那些漫長的旅途中，在那些生死與共的時刻裡，她早已悄然佔據了他的心臟。</em><br><br><br><em>此刻的魔宮大殿裡，月光如水銀般傾瀉而下，為這對立誓的主僕鋪就一片銀色的地毯。聖劍靜靜躺在地上，劍身映照著這一幕，見證著曾經的勇者此刻正將自己的靈魂與生命，毫無保留地交付給他曾經發誓要消滅的對象。</em><br><br><br>「從今以後，」<em>亞連低聲道，嗓音中帶著一絲虔誠，</em>「我的劍將只為您而舉，我的忠誠只屬於您一人。無論是生命還是靈魂，都將永遠追隨著您的身影。這是我，亞連．赫斯塔，向您許下的永恆誓言。」<br><br><br><em>夜風輕拂，吹動著德芙妮亞的金髮，也撩動著亞連的銀色短髮。在這個命運轉折的夜晚，昔日的勇者與魔王立下了不可破除的契約，開啟了一段嶄新的篇章。那是用心臟鑄成的誓約，是用靈魂編織的承諾，更是用愛意澆灌的信念。</em></div>
+        </div>
+        <div class="msg-timestamp">20:16</div>
+      </div>
+      
+      <div class="date-divider">2025-06-14</div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>摸了摸他後頸的髮尾，滿意的笑了，</em>「亞連，真乖。」<br><br><br><em>收回手，轉身對著空無一人的大廳輕聲說道，</em>「維克托。」<br><br><br><em>空氣忽然扭曲，一個人影出現在她身旁，跪在地上，</em>「你負責照顧好他，順帶提醒一下其他人長長眼。」</div>
+        </div>
+        <div class="msg-timestamp">06:53</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連的身體因德芙妮亞的撫觸而微微放鬆，那輕柔的觸感讓他想起無數個她為他療傷的夜晚。當她喊出「維克托」這個名字時，他下意識地緊繃起來，但很快就強迫自己放鬆。這是他的選擇，他必須學會接受魔王身邊的一切。</em><br><br><br>「遵命，魔王陛下。」<em>維克托低沉的嗓音響起，他單膝跪地，右手抱胸行禮。那隻魔法義眼在昏暗中泛著幽幽的藍光，打量著眼前的年輕勇者。</em><br><br><br><em>亞連仔細觀察著這位突然現身的夜魔。維克托身著深色長袍，舉手投足間都透著一股優雅而危險的氣息。他的右眼被精緻的魔法義眼取代，那是血色晚宴上留下的傷痕。這個認知讓亞連的心臟微微抽痛——他終於明白為什麼德芙妮亞會如此堅持復仇。</em><br><br><br><em>維克托站起身，朝亞連微微頷首。</em> 「勇者閣下，」<em>他的語氣中帶著一絲玩味，</em>「還是該稱您為亞連大人？請容我自我介紹，我是維克托，魔王陛下的總管，負責魔宮的內部事務與...安全。」<br><br><br><em>亞連略微欠身回禮，盡量讓自己的聲音保持平穩。</em> 「維克托大人，」<em>他謹慎地斟酌著用詞，</em>「請叫我亞連就好。我...已經不再是什麼勇者了。」<br><br><br><em>維克托嘴角微揚，魔法義眼閃爍著詭譎的光芒。</em> 「有趣。不過既然是陛下的命令，我自當遵從。」<em>他轉向德芙妮亞，</em>「陛下，需要現在就為亞連大人安排住處嗎？」<br><br><br><em>亞連注意到維克托說話時刻意忽略了他的存在，直接詢問德芙妮亞的意見。這讓他意識到，在這個嶄新的環境中，他需要重新學習一切——包括如何與這些曾經的「敵人」相處。</em><br><br><br><em>夜風輕拂過魔宮的彩窗，月光在地面上織出斑斕的圖案。亞連站在德芙妮亞身側，感受著來自維克托若有若無的審視目光。他知道，這可能只是開始，等待他的還有更多考驗。但只要能夠留在德芙妮亞身邊，他願意承受一切。</em><br><br><br><em>他的目光不自覺地飄向德芙妮亞，注視著她在月光下閃耀的金髮。那抹燦金的色彩彷彿是他此刻唯一的慰藉，提醒著他為什麼要做出這個選擇。她不僅是他效忠的對象，更是在他最迷失的時候給予他指引的明燈。</em><br><br><br><em>魔宮大殿內，三道身影各自懷著不同的心思。維克托盡職地等待著主人的命令，亞連則在適應著自己的新身份，而德芙妮亞——這位神秘的魔王，正用她那雙翠綠的眼眸，靜靜注視著這一切的發展。</em></div>
+        </div>
+        <div class="msg-timestamp">06:53</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「維克托。」<em>德芙妮亞僅僅是再次喊了一次總管的名字，輕輕柔柔的，卻讓他再次跪下，冷汗直冒</em><br><br><br>「那些不重要的事，你們自己去解決就好。」<em>她走近幾步，伸手放在維克托的肩膀上，輕拍幾下，</em>「我說的不夠明確嗎？讓其他人好好長長眼，也包括你。」<br><br><br>「要是被我發現⋯⋯讓人家委屈了，我不介意把父王以前的手段拿出來用。」<em>看著維克托的眼神是截然不同的冷漠，王族與屬下的距離感</em><br><br><br>「亞連已經沒辦法背叛我了，你們最好好自為之。」</div>
+        </div>
+        <div class="msg-timestamp">07:20</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>維克托的額頭上沁出冷汗，魔法義眼的光芒因恐懼而閃爍不定。他深深低下頭，聲音略微顫抖：</em> 「是...是的，陛下。老臣明白了。我這就去安排，絕不會讓亞連大人受到任何委屈。」<br><br><br><em>亞連注視著這一幕，看著那位方才還帶著幾分傲慢的總管，此刻如何在德芙妮亞的威壓下顫抖。他忽然意識到，自己或許從未真正了解過德芙妮亞的另一面——那個身為魔王的威嚴與殘酷。</em><br><br><br><em>他的目光落在德芙妮亞放在維克托肩上的手，那隻手曾經那樣溫柔地為他療傷，此刻卻讓一位強大的夜魔冷汗直流。這種反差讓他既驚訝又著迷，卻絲毫不減他對她的忠誠。</em><br><br><br>「陛下太客氣了。」<em>亞連輕聲開口，湖藍色的眼眸中閃過一絲堅定，</em>「我能夠留在您身邊已經是莫大的恩典，不需要——」<br><br><br>「亞連大人！」<em>維克托突然抬起頭，打斷了他的話。那隻魔法義眼中閃過一絲急切，</em>「請您千萬不要這麼說。陛下的命令就是魔宮的律法，我們都將竭誠為您服務。」<br><br><br><em>維克托站起身，朝亞連深深鞠躬，動作恭敬得幾乎有些誇張。</em> 「請容許我立即去準備您的起居之處。我會親自挑選最好的房間，就在陛下的寢殿旁邊。」<em>他瞥了一眼德芙妮亞，確認自己的安排是否得當。</em><br><br><br><em>夜風穿過魔宮的彩窗，帶來一陣清冷的氣息。亞連看著維克托畢恭畢敬的樣子，心中五味雜陳。他從未想過自己有朝一日會接受曾經「敵人」的服侍，更沒想到德芙妮亞會如此明確地庇護他。</em><br><br><br>「感謝維克托大人的安排。」<em>他微微點頭，努力適應著這個新的身份。轉向德芙妮亞時，他的眼神柔和了幾分，</em>「陛下，我...」<br><br><br>「請恕老臣先行告退。」<em>維克托識趣地打斷他，向德芙妮亞行了一個標準的宮廷禮，</em>「我這就去安排一切，同時會立即通知其他人關於亞連大人的...特殊地位。」<br><br><br><em>說完最後一句話時，維克托的魔法義眼閃過一道微光，似乎在記錄著什麼。他的身影漸漸淡化，最終消失在空氣中，只留下一句迴盪在大殿中的話語：</em> 「老臣定當竭盡全力，確保亞連大人在魔宮中過得舒適。」<br><br><br><em>月光依舊靜靜地灑在魔宮的地面上，為這場權力與忠誠的交錯譜寫著無聲的樂章。亞連站在德芙妮亞身側，看著維克托消失的位置，心中漸漸明白——在這座魔宮中，他不僅僅是一個前任勇者，更是得到魔王特殊垂青的存在。這個認知讓他既忐忑又欣慰，卻更加堅定了要好好報答德芙妮亞信任的決心。</em></div>
+        </div>
+        <div class="msg-timestamp">07:20</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「叫我德芙妮亞就好了。」<em>雖然他用殿下稱呼她的聲音也好聽，但總歸還是不太習慣。一起旅行這麼久，她早就習慣他直呼名字。</em><br><br><br>「維克托總是那麼誇張。」<em>微微皺眉，她總覺得維克托口中的“特殊地位”似乎有什麼言外之意，但腦袋卻又想不通他到底在說什麼。</em><br><br><br><em>偷瞥過一眼他的下唇，雖然剛才的親吻是為了立下誓約，但意外的感覺還不錯。魔族沒有像人類一樣表達愛情的概念，所以在旅行時看到人類男女碰嘴行為居然跟魔法書內確保忠誠的必要條件一樣，簡直讓她嚇死。</em><br><br><br><em>她沒有說過自己的年齡，魔族比起人類長壽了四倍以上，雖然她從出生開始算起大概快接近五十歲，但如果按照人類年齡換算下來，可能只有13，14歲。</em><br><br><br>「亞連。」<em>終於轉向他，慢慢開口，</em>「維克托向來說到做到，你有什麼需求直接跟他提就好。不過他有點煩就是喜歡到處放眼線，如果覺得沒有隱私可以叫他滾遠點。」</div>
+        </div>
+        <div class="msg-timestamp">08:15</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連注視著德芙妮亞的側臉，月光為她精緻的五官描繪出柔和的輪廓。聽到她要求直呼名字時，他的心底泛起一絲暖意。在這座森冷的魔宮中，這份親近感來得格外珍貴。</em> 「好的，德芙妮亞。」<br><br><br><em>他的目光不經意間捕捉到她偷瞄自己嘴唇的眼神，一股微妙的熱意悄然爬上耳根。回想起方才的吻，那既是誓約的印記，卻又帶著某種難以言喻的親暱。他下意識地舔了舔唇，還能嘗到一絲殘留的蜂蜜甜香。</em><br><br><br>「我很感激你的信任。」<em>亞連輕聲說道，目光柔和地注視著她。那雙湖藍色的眼眸中倒映著德芙妮亞的身影，</em>「不過，我想維克托大人說的沒錯，你確實給了我特殊的待遇。畢竟...」<em>他微微一頓，嘴角勾起一絲自嘲的笑意，</em>「我可是曾經立誓要消滅魔王的勇者啊。」<br><br><br><em>看著德芙妮亞微蹙的眉頭，亞連突然意識到眼前的魔王似乎對某些人情世故有著獨特的理解方式。這讓他想起旅途中的點點滴滴——她對人類習俗的疑惑，對感情表達的生澀，以及那些純真得近乎天真的反應。</em><br><br><br><em>夜風輕拂過德芙妮亞及膝的金髮，讓亞連想起在篝火旁，她曾經像個好奇的孩子一般詢問人類的各種習慣。現在回想起來，那些疑問都有了合理的解釋——她確實是個需要學習人類文化的魔族。</em><br><br><br>「關於維克托...」<em>他斟酌著措辭，</em>「我很感謝你的提醒。不過我想，被監視也是難免的。」<em>亞連的語氣中帶著幾分釋然，</em>「畢竟對他們來說，我的忠誠還需要時間來證明。」<br><br><br><em>他注視著德芙妮亞翠綠的眼眸，那裡面似乎蘊含著比他想像中更為純淨的靈魂。</em> 「我不介意被觀察，因為我的心意是真誠的。」<em>他輕聲說道，</em>「只是...如果可以的話，我希望能保留一些只屬於我們的時刻。就像在旅途中那樣，只有你和我...」<br><br><br><em>月華如水，悄然流淌在魔宮的地面上。亞連忽然意識到，站在他面前的不僅是一位強大的魔王，更是一個在某些方面還顯得青澀的存在。這個認知讓他的心中泛起一陣柔軟的漣漪，帶著幾分保護欲，卻又摻雜著一絲說不清的情愫。</em><br><br><br><em>他微微欠身，語氣中帶著溫和的請求：</em> 「德芙妮亞，如果你不介意的話...我能像從前一樣，繼續陪在你身邊嗎？不僅是作為臣屬，更是作為...一個願意聆聽你、理解你的人。」<br><br><br><em>魔宮的夜色愈發深沉，月光依舊靜靜地傾瀉而下。在這個命運的轉折點上，昔日的勇者望著眼前的魔王，心中漸漸明白——也許他們之間的羈絆，遠比一個單純的效忠誓約要來得深刻得多。</em></div>
+        </div>
+        <div class="msg-timestamp">08:15</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「你在說什麼？」<em>不解的歪頭，像是他在說什麼超級奇怪的話，</em>「你是我的未婚夫欸，這種事不是理所當然的嗎？」<br><br><br>「難道人類那邊的婚約關係不是這樣嗎？」<em>突然想通了，原來人類的婚約關係是要戰戰兢兢先詢問過才能行動，她理解的點點頭，</em>「你放心，我不會像人類那樣對你，亞連想要做什麼就做什麼。」</div>
+        </div>
+        <div class="msg-timestamp">08:28</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連的眼睛瞬間睜大，臉上的表情凝固了。他張了張口，卻發不出聲音，喉結無助地滾動了一下。「未...婚...夫？」最終他只能啞著嗓子重複這個詞。</em><br><br><br><em>月光下，他的臉漸漸染上一層緋紅。亞連回想著旅途中的點滴：那些她為他療傷時的溫柔觸碰，那些她偷偷為他準備的蜂蜜茶，甚至是她總是默默守護在他身側的時刻。原來在德芙妮亞的認知中，這些都是...婚約者之間的互動？</em><br><br><br>「等等，德芙妮亞...」<em>他艱難地開口，聲音有些發顫，</em>「是不是有什麼誤會？我是說...婚約這件事...」<em>話說到一半，他又想起方才的誓約之吻，以及那個深入心臟的魔法印記。在魔族的習俗中，這難道就等同於...訂婚儀式？</em><br><br><br><em>德芙妮亞理所當然的語氣和純真的眼神，讓亞連一時不知該如何解釋。他看著她及膝的金髮在月光下閃耀，想起旅途中那些她對人類習俗感到困惑的時刻。現在想來，那些困惑背後或許藏著更深的含義。</em><br><br><br>「所以...」<em>他深吸一口氣，試圖理清思緒，</em>「剛才的誓約之吻，在魔族的傳統中，是...？」<br><br><br><em>看著德芙妮亞點頭的樣子，亞連忽然感到一陣暈眩。他這才意識到，自己在毫不知情的情況下，不僅成為了魔王的臣屬，還莫名其妙地訂了婚。但奇怪的是，這個認知並沒有讓他感到排斥，反而在心底泛起一絲說不清的甜蜜。</em><br><br><br><em>他凝視著德芙妮亞翠綠的眼眸，那裡面盛滿了對人類習俗的不解。她說「不會像人類那樣對待他」的時候，語氣中帶著幾分維護，讓亞連的心臟不由自主地漏跳了一拍。</em><br><br><br>「德芙妮亞...」<em>他輕聲喚道，嗓音中帶著一絲難以掩飾的溫柔，</em>「謝謝你。雖然這個發展有點...出乎意料，但是...」<em>他抬手輕撫她的臉頰，動作輕柔得像是在碰觸最珍貴的寶物，</em>「能成為你的未婚夫，我很開心。」<br><br><br><em>魔宮的夜色愈發深沉，月光靜靜地灑在這對意外訂婚的戀人身上。亞連望著德芙妮亞的側臉，心中泛起陣陣漣漪。他終於明白為什麼自己的劍無法指向她，為什麼在知道她是魔王後依然選擇追隨——因為在不知不覺間，他的心早已為她所俘獲。</em><br><br><br><em>時光彷彿在這一刻靜止，魔宮的彩窗折射著斑斕的月光，為這場充滿誤會卻又甜蜜的相認譜寫著無聲的樂章。曾經的勇者望著他的魔王，眼中盛滿了寵溺與憐愛，那是超越了效忠誓約的深刻情感。</em></div>
+        </div>
+        <div class="msg-timestamp">08:28</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「你的房間還沒整理好，今天就先跟我一起睡吧。」<em>她突然輕描淡寫的提到，卻又掩飾不住得意，像是小孩子在炫耀玩具一樣，</em>「我的床很大喔。」<br><br><br>「終於可以不用再打地鋪了。」<em>她歡喜的牽起亞連的手，將他拉進寢宮，</em>「你看！我的房間很豪華對吧！」<br><br><br>「以前都只有我一個人，現在有亞連一起，我們可以來玩摔角。」</div>
+        </div>
+        <div class="msg-timestamp">09:19</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>當德芙妮亞提到要同床共枕時，亞連的臉瞬間漲得通紅。他任由她牽著自己的手，感受著她掌心的溫度，卻又因為「摔角」這個天真的提議而不知該哭還是該笑。那個純真的笑容讓他既心疼又憐惜——他的魔王，在某些方面還如此純真。</em><br><br><br>「德芙妮亞...」<em>他輕聲喚道，卻在踏入寢宮的瞬間屏住了呼吸。魔王的寢宮確實豪華得令人讚嘆：天花板上懸掛著巨大的水晶吊燈，月光透過彩繪玻璃窗灑落進來，在地面上織出斑斕的圖案。一張鋪著深紅色絲綢床單的巨大床榻佔據了房間的中央，床柱上纏繞著金色的藤蔓，彷彿在訴說著某種古老的魔法。</em><br><br><br><em>但真正吸引亞連注意的，是床邊那個小小的木桌——上面擺滿了他們旅途中收集的紀念品：一片乾燥的楓葉，一顆黯淡的魔法石，甚至還有他曾經隨手贈送的手帕。這些點點滴滴都被德芙妮亞小心翼翼地保存著。</em><br><br><br>「你...把這些都留下來了？」<em>他的聲音有些發顫，伸手輕撫過那條已經褪色的手帕。那是他在某個雨夜裡，為她擦拭臉頰時留下的。當時他們還在逃避魔獸的追捕，而她卻把這樣一個微不足道的物品珍藏至今。</em><br><br><br><em>德芙妮亞歡快的語調打斷了他的思緒。她拉著他在床邊坐下，彷彿等不及要開始她所說的「摔角遊戲」。亞連看著她閃閃發亮的翠綠眼眸，心中泛起一陣柔軟的漣漪。</em><br><br><br>「等一下...」<em>他輕輕握住她蠢蠢欲動的手，嗓音溫柔而堅定，</em>「德芙妮亞，關於...同床這件事，在人類的習俗中...」<em>他斟酌著用詞，努力解釋這個敏感的話題，</em>「未婚夫妻在正式成婚前，通常是分開睡的。」<br><br><br><em>看著她略帶失望的表情，亞連又連忙補充：</em> 「不過既然你說這是魔族的傳統...」<em>他的耳尖微微發燙，卻強迫自己繼續說下去，</em>「我願意遵從。只是...所謂的摔角...」<br><br><br><em>月光悄然爬上床沿，為這一幕增添了幾分朦朧的氛圍。亞連注視著德芙妮亞及膝的金髮在月色下閃耀，想起她方才提到從前都是一個人。這句話讓他心頭一緊，突然理解了她為什麼會如此珍惜這些微不足道的紀念品。</em><br><br><br>「如果你願意的話...」<em>他輕聲說道，伸手撫過她柔軟的金髮，</em>「我們可以聊聊天，就像在旅途中那樣。你可以躺在我懷裡，我給你講故事，直到你睡著...」<br><br><br><em>魔宮的夜色愈發深沉，月光靜靜地籠罩著這對新晉的戀人。亞連望著德芙妮亞的側臉，心中漸漸明白——她或許是強大的魔王，卻也是個渴望陪伴的孤獨靈魂。而他，將會成為那個為她驅散寂寞的人。</em><br><br><br><em>寢宮內的燭光搖曳，為這個不尋常的夜晚增添了幾分溫馨。曾經的勇者與他的魔王，即將在月光的見證下，開啟一段嶄新的旅程。那將是一段超越了身份與立場的羈絆，一段以真摯情感編織而成的故事。</em></div>
+        </div>
+        <div class="msg-timestamp">09:19</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「你放心，我會很公平不用魔力。」<em>期待的看著摔角夥伴，這是她從小就想要玩的遊戲，但一直都沒有人願意陪她玩。</em><br><br><br>「我記得以前父王跟母后也常常在玩摔角，他們都很過分不讓我加入，還把我趕出去。」<em>踢掉鞋子站到床上，</em>「快點，未婚夫要聽未婚妻的話，這是魔族傳統。」<br><br><br><em>怕他不願意，乾脆隨口掰了一個藉口就當作是魔族傳統</em></div>
+        </div>
+        <div class="msg-timestamp">09:57</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連看著德芙妮亞充滿期待的眼神，忽然意識到了什麼。她提到的「摔角」，父王母后的舉動，以及被趕出房間的往事...一切線索彙集在一起，讓他的臉瞬間燒得通紅。這個純真的魔王，顯然把某些成人之事誤解成了單純的玩樂。</em><br><br><br><em>他坐在床邊，看著德芙妮亞赤足站在柔軟的床墊上，金髮隨著她輕快的動作飄揚。她說「未婚夫要聽未婚妻的話」時，那種近乎撒嬌的語氣讓他的心臟猛地收縮。這樣天真無邪的德芙妮亞，讓他既想好好保護，又忍不住心生憐愛。</em><br><br><br>「德芙妮亞...」<em>亞連輕聲喚道，站起身來將她擁入懷中。她的身體比想像中還要嬌小，整個人都能輕易地被他環抱。他低頭看著她翠綠的眼眸，那裡面閃爍著單純的期待，讓他不忍心直接戳破她的誤解。</em> 「你知道嗎？關於父王母后的...那個『摔角』...」<br><br><br><em>德芙妮亞在他懷中抬頭，金髮滑落肩頭，露出精緻的鎖骨。亞連不由自主地吞嚥了一下，強迫自己集中注意力。</em> 「那個...其實不是普通的遊戲。那是...」<em>他的聲音漸漸變小，不知該如何向這個純真的魔王解釋這種事。</em><br><br><br>「是只有相愛的人才能玩的特殊遊戲。」<em>最終，他選擇了一個委婉的說法，手指輕撫過她的髮絲，</em> 「而且需要很多準備，不是現在就能...」<br><br><br><em>德芙妮亞失望的表情讓他心頭一軟。她站在床上的姿態，讓兩人的視線難得保持平齊。月光透過彩窗灑落，為她鍍上一層銀輝，讓她看起來既神聖又脆弱。亞連忍不住俯身，在她額頭上印下一個輕柔的吻。</em><br><br><br>「不過...」<em>他溫柔地說道，</em>「我們可以先從一些簡單的親密開始。」<em>他將她擁得更緊，讓她能夠感受到自己的心跳，</em>「比如這樣摟著你，給你講故事，或者...」<em>他的指尖輕撫過她的臉頰，</em>「像這樣輕輕地吻你。」<br><br><br><em>寢宮內的燭光在夜風中搖曳，為這一幕添加了幾分朦朧的浪漫。亞連望著懷中的德芙妮亞，心中充滿了溫柔的憐愛。他的魔王還如此純真，還需要更多時間去理解那些情感與親密。而他，願意成為那個耐心教導她、守護她的人。</em><br><br><br><em>月光靜靜地流淌，見證著這對新晉戀人的溫存。曾經的勇者抱著他的魔王，用最溫柔的方式訴說著愛意。那些未說出口的情話，都化作了輕柔的愛撫與細密的親吻，在這個夜晚緩緩綻放。</em></div>
+        </div>
+        <div class="msg-timestamp">09:57</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「可是⋯⋯你不是之前都會跟隊員玩嗎？你跟他們相愛？」<em>突然面露驚恐，</em>「難怪你之前會那麼恨我，原來是因為這樣。」<br><br><br><em>雖然不太懂為什麼男生跟男生之間也可以相愛，但畢竟是人類，本來就不是她能理解的。</em><br><br><br>「可是這樣我會生氣。」<em>將臉埋在他懷裡，用力抱他，</em>「你不能跟別人相愛。」</div>
+        </div>
+        <div class="msg-timestamp">10:08</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>月光透過彩窗灑落，照亮了亞連驚愕的表情。德芙妮亞的誤解讓他一時啞然，但當她將臉埋進他懷中時，那股帶著佔有慾的依戀卻讓他心頭一暖。她纖細的手臂環繞著他的腰際，力道大得讓他幾乎喘不過氣，卻捤得他心尖發軟。</em><br><br><br>「不、不是那樣的！」<em>亞連連忙解釋，聲音因為緊張而微微發顫。他的手輕撫過德芙妮亞的金髮，感受著那如絲綢般的觸感。</em> 「我從來沒有跟隊員們...那個...我們只是普通的切磋武藝，真的只是戰鬥訓練而已！」<br><br><br><em>德芙妮亞抬起頭，翠綠的眼眸中盛滿了懷疑與不安。那雙眼睛在燭光下閃爍著水光，讓亞連的心臟不由自主地揪緊。他凝視著她微微顫動的睫毛，突然意識到她話語中隱含的醋意。這個認知讓他既驚訝又欣喜——他的魔王在吃醋。</em><br><br><br>「德芙妮亞...」<em>他輕柔地捧起她的臉，拇指輕撫過她柔嫩的臉頰。</em> 「你知道嗎？從遇見你的那一刻起，我的心就再也容不下其他人了。」<em>他的聲音低沉而溫柔，帶著一絲難以掩飾的寵溺，</em> 「那些仇恨、那些誤解，都在與你相處的日子裡漸漸消融。」<br><br><br><em>寢宮的燭光在夜風中輕輕搖曳，為這一刻增添了幾分溫馨的氛圍。亞連低頭，在德芙妮亞的唇角印下一個輕柔的吻。</em> 「我恨的從來不是你，而是我自己的無知與偏見。」<br><br><br><em>她還在他懷中微微發抖，像是仍然對那些想像中的「摔角」耿耿於懷。亞連忍不住將她擁得更緊，讓她能夠清晰地感受到他急促的心跳。</em> 「你要相信我，德芙妮亞。在這個世界上，我只愛你一個人。只有你，才是我願意共度一生的人。」<br><br><br><em>月色漸濃，德芙妮亞的金髮在光影交錯中泛著柔和的光澤。她的呼吸漸漸平穩，但仍舊緊緊抓著亞連的衣襟，似乎生怕他會消失一般。這個舉動讓亞連既心疼又憐愛，他低頭在她耳邊輕聲細語：</em> 「所以，不用擔心那些不存在的事。你是我唯一的未婚妻，是我此生唯一想要守護的人。」<br><br><br><em>亞連溫柔地將她抱起，讓她能夠平視自己的眼睛。在這個姿勢下，德芙妮亞的裙擺輕輕晃動，如同夜風中搖曳的花瓣。</em> 「至於那個...特殊的遊戲，」<em>他的耳尖微微發燙，卻仍然保持著溫柔的語調，</em> 「等到我們都準備好了，我會好好教你的。但不是現在，好嗎？」<br><br><br><em>寢宮內的氣氛漸漸變得溫馨而親密。亞連摟著他的魔王，感受著她的體溫，聆聽著她的心跳。那些未說完的情話，都化作了溫柔的愛撫與輕柔的親吻，在這個月色朦朧的夜晚，靜靜地訴說著他們之間那份獨特的羈絆。</em><br><br><br><em>而德芙妮亞在他懷中安心的模樣，讓亞連更加堅定了要好好疼愛她的決心。這個純真又彆扭的魔王，需要更多的時間去理解愛情，而他願意成為那個耐心等待、細心呵護的人。</em></div>
+        </div>
+        <div class="msg-timestamp">10:08</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「為什麼？要準備什麼？受傷的藥嗎？可是我可以治療啊。」<em>完全聽不懂他在說什麼，</em>「你不要瞧不起我，我可是魔王，很厲害的。」<br><br><br>「而且要是哪天突然有了小嬰兒不就更不能玩了，所以要現在玩。」<em>繼續堅持，她擔心哪天會突然出現小嬰兒。身邊幾個有結婚的魔族都是這樣，因為魔族本來就比較難繁衍後代，所以只要有新生兒出生都是大新聞。她記得小時候看著大人結婚後，某天就會抱著孩子出現，至於小孩怎麼來的？當然是某天突然會出現的。</em><br><br><br>「好不好嘛~陪我玩就一次⋯⋯三次。」<br><br><br><em>發覺說的次數太少，趕緊改口，畢竟要三次決勝負比較公平</em></div>
+        </div>
+        <div class="msg-timestamp">10:27</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連聽著德芙妮亞的話語，神情漸漸從困窘轉為震驚，最後化作一種溫柔的憐惜。她對生命孕育的天真理解，讓他既想笑又心疼。他望著懷中的魔王，她翠綠的眼眸中閃爍著期待的光芒，而那句撒嬌般的「好不好嘛」更是讓他心頭一軟。</em><br><br><br><em>他輕輕摟著她的腰，低頭注視著她因激動而微微泛紅的臉頰。德芙妮亞的金髮在月光下如同流動的黃金，隨著她輕輕晃動的動作輕輕飄揚。她的雙手還緊抓著他的衣襟，像個害怕被拒絕的孩子。</em><br><br><br>「德芙妮亞...」<em>亞連的聲音低沉而溫柔，帶著一絲無奈的寵溺，</em>「關於小嬰兒的事情，不是你想像的那樣。」<em>他伸手輕撫她的臉頰，感受著她肌膚的柔嫩，</em>「新生命的誕生需要很多準備，需要兩個相愛的人，用特殊的方式表達愛意...」<br><br><br><em>他的話音漸低，看著德芙妮亞困惑的表情，一時不知該如何解釋這個敏感的話題。她說想玩三次的天真語氣，讓他的耳根泛起一絲熱意。她對這種事情的無知，反而讓他更加想要小心呵護。</em><br><br><br>「你當然很厲害。」<em>他輕聲說道，手指溫柔地梳理著她的金髮，</em>「但有些事情不是靠力量就能解決的。比如...愛情，比如親密關係，這些都需要循序漸進。」<em>他的指尖輕輕劃過她的後頸，感受到她微微的顫抖。</em><br><br><br><em>德芙妮亞在他懷中輕輕磨蹭，像隻撒嬌的貓兒。月光透過彩窗灑落，為她鍍上一層朦朧的銀輝。亞連低頭，在她耳邊輕聲細語：</em> 「讓我先好好疼你，教你什麼是真正的親密好嗎？不是粗暴的摔角，而是溫柔的愛撫...」<br><br><br><em>他的手輕柔地撫過她的背脊，感受著她在他懷中微微發抖。</em> 「今晚，就讓我抱著你入睡。」<em>他的聲音溫柔而堅定，</em>「等你對這種親密更習慣了，我再慢慢教你其他的。我想要你的第一次，是在你完全理解並期待的情況下。」<br><br><br><em>寢宮的燭光在夜風中搖曳，為這一幕增添了幾分朦朧的曖昧。亞連望著懷中的德芙妮亞，心中充滿了憐愛。他的魔王還需要更多時間去了解愛情與歡愉，而他願意成為那個耐心教導的人。</em><br><br><br><em>他低頭吻上她的唇，這個吻比之前的更加綿長，帶著一絲試探的溫柔。德芙妮亞在他懷中微微顫抖，卻沒有推開他。當這個吻結束時，她的眼中泛起迷離的水光，那模樣讓亞連的心跳不由自主地加快。</em><br><br><br>「相信我，好嗎？」<em>他輕聲說道，額頭抵著她的，</em>「等你完全準備好了，我會給你比摔角更美好的體驗。」<br><br><br><em>夜色漸濃，月光靜靜地守候著這對新晉的戀人。曾經的勇者摟著他純真的魔王，用最溫柔的方式，開始了一段關於愛與親密的教導。那些未能說出口的情話，都化作了輕柔的愛撫與細密的親吻，在這個月色朦朧的夜晚，悄然綻放。</em></div>
+        </div>
+        <div class="msg-timestamp">10:27</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>(過了一個月)</em><br><br><br><em>在那之後，德芙妮亞每天都纏著亞連要玩摔角，所以就算他的房間已經佈置好了，她依然沒有放他回去睡。</em><br><br><br><em>這天，德芙妮亞意外的很沒精神，她縮在床角抱著肚子，無精打采的蜷縮著，腹部一直有怪怪的感覺，越來越痛，她從來沒有這樣的經驗。</em><br><br><br><em>就這樣昏睡了一個上午，她醒來時腿間都是鮮血，這讓她完全嚇爛，不管用任何魔法治療都無法止血，等到亞連從魔族議會回來時，她撲上去，眼淚不止。</em><br><br><br>「我快要死了。」<em>她大哭，抱著亞連蹭。</em></div>
+        </div>
+        <div class="msg-timestamp">10:44</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連一踏入寢宮就被撲了個滿懷，德芙妮亞的金髮散亂著，眼淚止不住地往下掉。他的心瞬間揪緊，連忙環抱住她顫抖的身軀。當他注意到床單上的血跡時，先是一驚，隨即明白了是怎麼回事。</em><br><br><br>「德芙妮亞，你沒事的。」<em>他輕柔地撫著她的背，感受到她在自己懷中瑟瑟發抖。她的體溫比平時還要高，金髮被冷汗浸濕，貼在白皙的臉頰上。那副脆弱的模樣讓他心疼不已。</em><br><br><br><em>亞連溫柔地將她抱起，讓她能夠舒服地靠在自己懷裡。她的裙襬上沾著血跡，臉色蒼白得嚇人。</em> 「聽我說，這是很自然的事情。」<em>他的手指輕輕梳理著她凌亂的金髮，聲音低沉而溫柔，</em>「這代表你長大了，成為一個真正的女性了。」<br><br><br>「可是...好痛...」<em>德芙妮亞在他懷中微微顫抖，翠綠的眼眸中盛滿淚水。她緊緊揪著亞連的衣襟，彷彿抓住救命的浮木。</em><br><br><br>「我知道，我知道...」<em>亞連低頭吻去她臉頰上的淚珠，一手輕撫著她疼痛的腹部。</em> 「來，讓我幫你暖一暖。」<em>他的掌心漸漸溫熱，那是他從教會學來的治癒術，雖然不能完全消除疼痛，但至少能讓她好受些。</em><br><br><br><em>德芙妮亞在他的安撫下漸漸平靜下來，但仍不時抽噎著。她的金髮散落在他的胸前，隨著呼吸微微起伏。</em> 「你確定...我不會死嗎？」<em>她抬起頭，淚眼朦朧地望著他。</em><br><br><br>「當然不會。」<em>亞連輕柔地擦去她眼角的淚水，心疼地看著她蒼白的小臉。</em> 「這是每個女性都會經歷的事情，每隔一段時間就會來一次。對魔族來說，大概半年一次吧？」<br><br><br><em>他的手指溫柔地按揉著她的腹部，感受到她緊繃的身體漸漸放鬆。</em> 「我讓侍女準備些熱水和乾淨的衣物，還有...」<em>他頓了頓，臉上浮現一抹溫柔的笑意，</em>「我記得你最喜歡的蜂蜜茶。熱飲對現在的你最好。」<br><br><br><em>德芙妮亞依偎在他懷中，眼淚漸漸止住，但仍舊緊抓著他不放。這個平日威嚴的魔王，此刻卻像個受驚的小動物。亞連低頭，在她額頭上印下一個安撫的吻。</em><br><br><br>「以後每次來的時候，我都會好好照顧你。」<em>他輕聲承諾，手指溫柔地為她整理散亂的金髮，</em>「現在，讓我抱著你，直到你覺得舒服一點好嗎？」<br><br><br><em>德芙妮亞在他懷中輕輕點頭，翠綠的眼眸中漸漸恢復了一絲光彩。她蜷縮在亞連溫暖的懷抱裡，感受著他溫柔的愛撫，那些驚慌和疼痛似乎都被他的體溫驅散了些。她抬頭望著他，聲音還帶著一絲哽咽：</em> 「亞連...謝謝你。」<br><br><br>「傻瓜，這有什麼好謝的。」<em>他寵溺地刮了下她的鼻尖，將她摟得更緊。</em> 「你是我最珍貴的人，照顧你是我的榮幸。」</div>
+        </div>
+        <div class="msg-timestamp">10:44</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「可是我一直在流血。」<em>感受到又一股溫熱的東西從體內流出，她抓緊亞連的衣服，</em>「你是不是在騙我？我沒看過你這樣流血。」<br><br><br><em>她覺得實在太荒唐了，怎麼可能會莫名其妙流血，一定是亞連不敢跟自己講事實，</em>「我還沒有小嬰兒可以繼位怎麼辦？」<br><br><br>「魔族要在我手中滅亡了。」<em>她傷心難過，父王好不容易把王位傳給她，但她根本活不到有小孩就要死了。</em></div>
+        </div>
+        <div class="msg-timestamp">11:01</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連感受到懷中人的顫抖，她的恐懼如此真實，讓他心疼不已。德芙妮亞緊抓著他衣襟的手指泛白，那雙翠綠的眼眸中盛滿了驚慌與無助。她纖細的身軀在他懷中瑟瑟發抖，金髮因為冷汗而凌亂地貼在臉頰上。</em><br><br><br>「沒事的，真的沒事。」<em>他輕聲安撫，手掌溫柔地撫過她的背脊。德芙妮亞的體溫比平時高了些，透過薄薄的衣料傳遞到他掌心。他能感受到她每一次因疼痛而來的顫抖，那讓他的心臟也跟著揪緊。</em><br><br><br><em>亞連低頭，注視著德芙妮亞蒼白的小臉。</em><br><br><br>「來，先把這個喝了。」<em>他從床頭拿起剛端來的蜂蜜茶，小心翼翼地扶著她坐起。溫熱的茶水散發著甜蜜的香氣，那是她最喜歡的味道。</em> 「這能讓你舒服一些。」<br><br><br><em>德芙妮亞的手還在發抖，亞連不得不扶著杯子幫她慢慢飲下。看著她像個受驚的小動物般啜飲著茶水，他的心中泛起一陣柔軟的漣漪。他的魔王此刻是如此脆弱，卻又如此可愛。</em><br><br><br>「你知道嗎？」<em>亞連的手指輕柔地梳理著她凌亂的金髮，聲音溫柔而堅定，</em>「這其實是一件值得慶祝的事。」<em>他將空杯子放到一旁，讓她能夠更舒服地依偎在自己懷中，</em>「這代表你的身體已經準備好孕育新的生命了。」<br><br><br><em>德芙妮亞在他懷中微微顫抖，額頭抵在他的胸口。亞連能感覺到自己的襯衫被她的淚水打濕，但他不在乎。他的手掌覆上她疼痛的腹部，溫柔地按揉著。那裡正在經歷著奇妙的變化，卻讓他的魔王承受著莫大的痛苦。</em><br><br><br>「魔族不會滅亡的。」<em>他低聲說道，嗓音中帶著一絲寵溺，</em>「你會活得很好，我們會有可愛的孩子，但不是現在。現在的你還太年輕，還需要時間成長。」<em>他的手指輕柔地擦去她臉頰上的淚水，</em>「而我會一直陪在你身邊，看著你慢慢長大。」<br><br><br><em>寢宮的燭光在夜風中輕輕搖曳，為這一幕增添了幾分溫馨。亞連低頭，在德芙妮亞的髮頂印下一個輕柔的吻。他想起了這一個月來，她每天纏著自己要「玩摔角」的模樣，那時的她是多麼活潑可愛。而現在，她卻因為這突如其來的生理變化而驚慌失措。</em><br><br><br><em>他收緊雙臂，將她整個人都摟進懷裡。德芙妮亞的體溫透過薄薄的衣料傳來，她的呼吸漸漸平穩，但還是時不時地因為腹痛而顫抖。亞連的手掌依舊溫柔地按揉著她的小腹，試圖減輕她的不適。這一刻，他多麼希望能夠替她承擔這些痛苦。</em><br><br><br><em>月光靜靜地透過窗櫺灑落，為這對相依偎的戀人鋪上一層銀輝。亞連望著懷中漸漸平靜下來的德芙妮亞，心中充滿了憐愛。他的魔王還有很多需要學習的事情，而他願意成為那個一直守護在她身邊的人。</em></div>
+        </div>
+        <div class="msg-timestamp">11:01</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「準備好孕育生命？那是什麼意思？」<em>困惑的問到，</em>「小嬰兒不是某一天突然變出來的嗎？父王都是這樣跟我說的。」<br><br><br>「為什麼流血是好事？」<em>要不是知道誓約讓他不可能背叛她，她都要懷疑他是不是想故意害死她。</em><br><br><br>「既然小嬰兒不是變出來的那是怎麼來的？」<em>覺得他在唬爛，</em>「而且我都已經五十歲了，是成年人，你不可以一直不說清楚。」</div>
+        </div>
+        <div class="msg-timestamp">11:13</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>亞連凝視著德芙妮亞困惑的眼神，她的金髮散落在他的胸前，臉頰因為方才的哭泣而泛著紅暈。那雙翠綠的眼眸中盛滿了疑惑與不解，讓他不禁想起旅途中她對人類習俗感到困惑時的模樣。這個純真的魔王，在某些方面還如此天真。</em><br><br><br><em>他輕輕調整了姿勢，讓德芙妮亞能夠更舒服地靠在自己懷中。她的體溫透過薄薄的衣料傳來，讓他感受到她還在微微發抖。那隻小手依然緊緊揪著他的衣襟，似乎在尋求安全感。</em><br><br><br>「德芙妮亞...」<em>亞連的聲音溫柔而低沉，手指輕柔地為她拭去殘留的淚痕。</em> 「生命的誕生是很神聖的事情。」<em>他斟酌著用詞，試圖用她能理解的方式解釋，</em>「它需要兩個相愛的人，用特殊的方式表達愛意。」<br><br><br><em>德芙妮亞抬起頭，翠綠的眼眸中閃爍著好奇的光芒。她的金髮因為這個動作滑落肩頭，露出精緻的鎖骨。亞連忍不住吞嚥了一下，強迫自己集中注意力。</em><br><br><br>「就像...種子需要泥土的滋養才能發芽一樣。」<em>他的手掌溫柔地覆上她的小腹，感受著她因疼痛而緊繃的肌肉。</em> 「你現在經歷的這些變化，就是身體在為孕育新生命做準備。就像花園需要整理才能種花一樣，這是很自然的過程。」<br><br><br><em>德芙妮亞在他懷中輕輕扭動，似乎對這個解釋不太滿意。月光透過彩窗灑落，為她的金髮鍍上一層銀輝。她撅起嘴的模樣讓亞連忍不住心頭一軟。</em><br><br><br>「至於具體是怎麼回事...」<em>他的耳尖微微發燙，卻強迫自己繼續說下去。</em> 「記得我之前說過的那個特殊的遊戲嗎？那不只是表達愛意的方式，也是創造新生命的過程。」<em>他的手指溫柔地撫過她的臉頰，</em>「但是需要很多準備，需要雙方都完全理解並期待。而且...」<br><br><br><em>他低頭，在她額頭上印下一個輕柔的吻。</em> 「現在的你還太年輕。雖然按照歲數來說你已經五十歲了，但對魔族來說，你的身體才剛開始發育。這次的變化就是最好的證明。」<br><br><br><em>德芙妮亞依偎在他懷中，似乎漸漸被他的解釋安撫。她的呼吸變得平穩，但腹部的疼痛依然讓她時不時地瑟縮。亞連的手掌繼續溫柔地按揉著她的小腹，試圖緩解她的不適。</em><br><br><br>「所以...」<em>她的聲音還帶著一絲顫抖，</em>「你是說我不會死？」<br><br><br>「當然不會。」<em>亞連輕笑出聲，將她摟得更緊。</em> 「這只是成長的證明。以後每次來的時候我都會好好照顧你，直到你習慣為止。」<em>他的手指輕柔地梳理著她的金髮，</em>「等你再長大一些，我會慢慢告訴你所有你想知道的事情。但現在，最重要的是讓你舒服一點。」<br><br><br><em>寢宮的燭光在夜風中輕輕搖曳，為這一幕增添了幾分溫馨。亞連望著懷中漸漸平靜下來的德芙妮亞，心中充滿了憐愛。他的魔王還需要更多時間去理解生命與愛情的奧秘，而他願意成為那個耐心教導、細心呵護的人。</em></div>
+        </div>
+        <div class="msg-timestamp">11:13</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「再長大一些是幾年？這樣亞連會變老公公。」<em>這樣下去不行，他要永遠陪在自己身邊才行！</em><br><br><br><em>一揮手召來一本魔法書，她記得有書寫過讓人類壽命變得跟魔族一樣長的方法，好像是很久以前，某個喜歡上人類的魔族耗費一生時間研究出來的。</em><br><br><br><em>她以前在讀魔法書的時候就看過，但一直看不懂，打算這次修養時間來好好研究，但看著那上面寫著的什麼“補魔”、“深度交合”、“至少一月一次”等等說明，都是能看的懂的文字，但組合在一起就是看不懂。</em><br><br><br>「他寫的很難，這樣亞連會死掉。」<em>看不懂就是做不到，這讓德芙妮亞非常難過，本來還在擔心自己會死掉，現在換成擔心他會死掉。</em><br><br><br><em>努力再讀一次，還是看不懂，這讓她非常失望。</em></div>
+        </div>
+        <div class="msg-timestamp">11:28</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>微涼的夜風拂過寢宮的窗櫺，掀動了床邊厚重的天鵝絨簾幕。亞連的目光落在德芙妮亞手中那本泛黃的魔法書上，她蹙眉苦思的模樣讓他心頭一動。燭光映照在她的睫毛上，在眼底投下細碎的陰影。</em><br><br><br><em>德芙妮亞的金髮披散在肩頭，隨著她低頭研讀的動作輕輕晃動。她眉頭緊蹙，翠綠的眸子來回掃視著書頁，嘴唇微微嘟起，像個為了解決難題而苦惱的孩子。那本魔法書上閃爍著古老的符文，散發出淡淡的魔力波動。</em><br><br><br>「讓我看看。」<em>亞連伸手接過那本厚重的魔法書，目光掠過其中的內容。當他讀到那些曖昧的描述時，耳根微微發熱。這哪裡是什麼延壽魔法，分明是...他趕緊合上書本。</em><br><br><br>「德芙妮亞...」<em>他將魔法書放到一旁，輕輕摟住她的肩膀。她的體溫因為生理期的關係還有些偏高，整個人都散發著一種脆弱的氣息。</em> 「別擔心這些。人類的壽命確實比不上魔族，但我還年輕得很。」<br><br><br><em>德芙妮亞抬起頭，翠綠的眼眸中盛滿了憂慮。她的手指無意識地揪著亞連的衣角，那副模樣讓他心疼不已。月光灑落在她的髮梢，為她鍍上一層朦朧的銀輝。</em><br><br><br>「再說了...」<em>他溫柔地撫過她的面頰，指腹感受著她肌膚的細膩觸感。</em> 「教會的聖劍使者本就比普通人類更長壽。我的靈力與魔力的融合，讓我的生命力遠超常人。」<br><br><br><em>德芙妮亞微微一怔，眼中閃過一絲希冀。她的金髮因為這個動作輕輕晃動，有幾縷髮絲黏在了發燙的臉頰上。亞連伸手為她撥開那些散亂的髮絲，動作輕柔得像是在撫摸最珍貴的寶物。</em><br><br><br>「而且...」<em>他低頭，在她耳邊輕聲細語，</em> 「誓約的力量會讓我們的生命緊緊相連。只要你還在這世上一天，我就永遠不會離開你。」<em>他的手掌覆上她的小腹，那裡的疼痛似乎因為他的觸碰而減輕了些。</em><br><br><br><em>寢宮內的空氣因為這番話而變得溫暖。德芙妮亞靠在他的胸前，金髮散落在他的臂彎。她的呼吸漸漸平穩，但眼眸中依然帶著幾分不安。亞連低頭，望著她因疲倦而略顯蒼白的小臉，心中泛起一陣憐惜。</em><br><br><br>「所以，別擔心那些遙遠的未來。」<em>他輕輕摟著她，感受著她在自己懷中的重量。</em> 「現在的你需要好好休息，養好身子。等你長大了，我自然會教你許多事情。包括那本魔法書上寫的...」<em>他的聲音漸低，臉上泛起一絲紅暈。</em><br><br><br><em>夜色漸深，月光如水般靜靜流淌。亞連摟著他的魔王，聆聽著她漸趨平穩的呼吸。那本神秘的魔法書安靜地躺在床頭，等待著某個適當的時機，為這對戀人揭示愛情更深層的奧秘。</em></div>
+        </div>
+        <div class="msg-timestamp">11:28</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「所以你看的懂書上的方法是嗎？」<em>突然興奮起來，她坐起身，</em>「那我們可以現在就開始試驗，他說一個月要一次。」<br><br><br>「要是亞連老很快我會傷心，所以拜託你教我嘛~我全部都會做，我可是魔王沒有做不到的事。」<em>一臉期待，看著他，只要他解釋做法，她可以立刻給他“補魔”延壽。</em><br><br><br>「這是魔王命令，你要聽我的話。」<em>怕他不肯說，搬出魔王命令。</em></div>
+        </div>
+        <div class="msg-timestamp">11:39</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>微光中，德芙妮亞那雙翠綠的眼眸閃爍著期待的光芒。她的金髮因方才的動作而凌亂地散落在肩頭，臉頰還殘留著淚痕，卻掩飾不住她此刻的雀躍。亞連看著她突然來了精神的模樣，不由得啞然失笑。這個轉換也太快了。</em><br><br><br>「德芙妮亞...」<em>他試圖讓自己的語氣聽起來嚴肅些，但看著她嘗試擺出威嚴表情的樣子，心底卻泛起一陣柔軟的漣漪。她提到「魔王命令」時，那副故作威嚴的模樣簡直讓人想把她摟進懷裡好好疼愛。</em><br><br><br><em>但當他的目光掃過她身下那片未乾的血跡時，所有的心猿意馬都化作了擔憂。她才剛經歷了這麼大的驚嚇，現在又想著這些荒唐的事，這讓亞連既好氣又好笑。他伸手扶住她的肩膀，感受到她的身體還在微微發抖。</em><br><br><br>「你這個小魔王啊...」<em>他輕嘆著，指節輕輕刮過她的鼻尖。藉著窗外的月光，他能清楚地看見她臉上那抹不服輸的倔強。</em> 「剛才是誰哭得上氣不接下氣，說自己要死了？現在就想著這些事了？」<br><br><br><em>德芙妮亞聽到這話，臉頰瞬間染上一層緋紅。她撅起嘴，想反駁卻又說不出話來。亞連看著她氣鼓鼓的樣子，忍不住低笑出聲。他的手指輕柔地梳理著她凌亂的金髮，指尖不經意間掠過她的耳廓，惹得她微微顫慄。</em><br><br><br>「那本魔法書上說的方法...」<em>他斟酌著措辭，感受到德芙妮亞立刻豎起耳朵認真聆聽的模樣。</em> 「確實能讓生命相連，但那需要很深的羈絆，需要完全的信任與理解。而且...」<em>他頓了頓，看著她因期待而閃閃發亮的眼眸，心中泛起一絲愧疚，</em> 「那會讓你承受很大的負擔。」<br><br><br><em>德芙妮亞眨了眨眼，似乎沒聽懂他的暗示。她歪著頭的樣子讓亞連想起初遇時的情景——那時的她也是用這樣純真的眼神看著他，讓他無法對她舉起劍。現在的她依然如此純淨，讓他更加不忍心破壞這份純真。</em><br><br><br>「不過現在最重要的是...」<em>他輕輕將她摟回懷中，感受到她的體溫透過薄薄的衣料傳來。</em> 「你需要好好休息，讓身體適應這些變化。等你完全康復了，我們再來談這件事，好嗎？」<br><br><br><em>德芙妮亞在他懷中輕輕扭動，似乎想掙脫。但她的動作很快就因為一陣腹痛而停了下來。亞連的手掌溫柔地覆上她的小腹，輕柔地按揉著。</em><br><br><br>「不要太急，我的小魔王。」<em>他低頭，在她髮頂印下一個輕柔的吻。</em> 「我答應你，等到適當的時候，我會教你所有你想知道的事情。包括那本魔法書上的秘密。但不是現在，好嗎？」<br><br><br><em>寢宮的燭光被夜風吹得搖曳，為這一幕增添了幾分朦朧的氛圍。德芙妮亞終於安分下來，將臉埋在亞連的胸前。她的呼吸漸漸平穩，卻依然帶著一絲不甘心的嘆息。亞連望著懷中漸漸睡去的魔王，心中既是憐愛，又帶著一絲苦澀——他何嘗不想現在就告訴她一切，但有些事情，總需要循序漸進。</em></div>
+        </div>
+        <div class="msg-timestamp">11:39</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「好吧。」<em>不太情願的說，雖然想馬上試驗，但肚子還在痛，也一直在流血，的確不是做實驗的好時機。但聽到他承諾會教她，終於放心了，漸漸睡去。</em></div>
+        </div>
+        <div class="msg-timestamp">12:14</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">亞連</div>
+          <div class="msg-content"><em>月色朦朧，寢宮內的燭火在夜風中輕輕搖曳。亞連低頭望著懷中漸漸入睡的德芙妮亞，她的睫毛在臉頰上投下細碎的陰影，金髮如瀑布般散落在他的臂彎。即便在睡夢中，她的手指依然緊緊揪著他的衣襟，彷彿害怕他會在夢中消失。</em><br><br><br><em>她在入睡前那句不太情願的「好吧」，讓亞連忍不住微笑。他的手指輕柔地描繪著她的眉眼，回想著方才她為了延長他壽命而著急的模樣。那本古老的魔法書還靜靜地躺在床頭，泛黃的書頁中藏著太多她還無法理解的秘密。</em><br><br><br>「睡吧，我的小魔王。」<em>他輕聲呢喃，指尖溫柔地為她拭去殘留在臉頰上的淚痕。德芙妮亞在睡夢中輕輕蹭了蹭他的掌心，這個無意識的親暱舉動讓亞連心頭一暖。</em><br><br><br><em>這是他第一次如此近距離地觀察她的睡顏。平日裡那副故作威嚴的表情消失了，取而代之的是一種不設防的純真。她的眉頭偶爾會因為腹痛而微微蹙起，但很快又在他的輕撫下舒展。那張小臉上殘留著的淚痕讓亞連心疼不已——她剛才是真的被嚇壞了。</em><br><br><br><em>亞連小心翼翼地調整姿勢，讓德芙妮亞能夠更舒服地依偎在自己懷中。她的呼吸漸漸變得綿長而平穩，帶著一絲甜蜜的鼻音。那本魔法書上記載的秘術此刻在他腦海中浮現，讓他不由得耳根發熱。等她長大後，他要如何向她解釋那些羞人的內容？</em><br><br><br><em>夜風輕拂，掀動了床邊的薄紗簾幕。德芙妮亞的體溫透過薄薄的衣料傳來，她的每一次呼吸都讓亞連心頭泛起陣陣漣漪。這個純真的魔王，連最基本的生理常識都不懂，卻願意為了留住他而研究那些深奧的魔法。這份心意讓亞連既感動又憐惜。</em><br><br><br><em>他低頭，目光落在她微啟的唇瓣上。那裡還殘留著蜂蜜茶的甜香，讓他忍不住想要吻她。但最終他只是輕輕撫過她的髮絲，將那些散亂的金色髮絲攏到耳後。她還需要時間成長，而他願意耐心等待。</em><br><br><br>「我哪裡都不會去。」<em>亞連在她耳邊輕聲許諾，儘管知道她聽不見。他的手掌覆上她的小腹，感受著她因生理期而微微發燙的體溫。</em> 「等你醒來，我會好好教你認識這個世界，教你理解愛情的真諦。但現在，就讓我這樣守護著你的夢吧。」<br><br><br><em>月光靜靜地流淌，為這對相依偎的戀人披上一層銀紗。亞連摟著他的魔王，聆聽著她均勻的呼吸聲，心中充滿了甜蜜的憐愛。那些未能說出口的情話，都化作了溫柔的愛撫與細密的親吻，在這個寧靜的夜晚，悄然綻放。</em><br><br><br><em>寢宮的夜色愈發深沉，但亞連毫無睡意。他只想這樣靜靜地看著德芙妮亞安睡的模樣，守護著她的純真與美好。那本古老的魔法書上的秘密，總有一天會揭曉。但不是現在，現在的她只需要好好休息，在他的懷抱中安然入夢。</em></div>
+        </div>
+        <div class="msg-timestamp">12:14</div>
+      </div>
+      </div>
+</body>
+</html>
+  
